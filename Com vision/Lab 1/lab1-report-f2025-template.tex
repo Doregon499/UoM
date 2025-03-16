@@ -1,0 +1,135 @@
+\documentclass{amsart}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{paralist}
+
+\usepackage{enumitem}
+%\usepackage[pagewise]{lineno}\linenumbers
+\usepackage[pagewise]{lineno}
+\usepackage[title]{appendix}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[labelformat=empty]{subfig}
+\usepackage[formats]{listingsutf8}
+
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{bx}{n}{<->tipabx10}{}
+
+\usepackage{mdframed}
+
+\newcommand{\abs}[1]{\left|#1\right|}  %\abs{x} yields |x|.
+\newcommand{\assign}{\mathrel{\mathop :}=}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\rms}{rms}
+
+\setlist{itemsep=4pt}
+\renewcommand{\lstlistingname}{Script}
+\lstset{
+    literate = {Ω}{{$\Omega$}}1,
+    language = Matlab,
+    basicstyle = \scriptsize,
+    tabsize = 4,
+    frame = single,
+    framerule = 0.5pt,
+    captionpos = b,
+    keywordstyle = \ttfamily\color{magenta},
+    identifierstyle = \ttfamily\color{cyan},
+    commentstyle = \ttfamily\color{gray},
+    stringstyle = \ttfamily\color{violet},
+    showstringspaces = false,
+    backgroundcolor = \color{yellow!10},
+    breaklines = true
+}
+
+% Set up problem environment.
+\newtheorem{theorem}{Theorem}
+\newtheorem{Problem}{Problem}
+
+\usepackage[title]{appendix}
+
+\begin{document}
+
+\title[aps1]{Lab Report 1 [{\bf lab1}]\\
+insert Your name\\
+insert Your Student Number\\
+insert Your email address\\
+insert Current date and time}
+
+%\author{Your Name}
+%\address{
+%Student number\\
+%Your email address
+%}
+%\email{you@umanitoba.ca}
+
+\date{2023-09-15}
+
+\begin{abstract}
+In preparing your solutions to Lab 1 (\colorbox{green!15}{\bf lab1}), type your solutions using either MS Word (and MathType for formulas) or \LaTeX\ (it does both text \& formulas \colorbox{red!15}{\bf and is used by Matlab} for concise rendition of formulas in labelling plot axes, legends and titles).  A template for your solutions written in \LaTeX\  accompanies the aps1 files.  All solutions must be typed.   In submitting your solutions for {\bf lab1}, use the UMLearn dropbox for lab1.
+The deadline for {\bf lab1} is [\colorbox{magenta!15}{\bf 3 Feb. 2025}].  
+\end{abstract}
+
+\keywords{Euler Exponential, Frequency (via Mersenne Primes), Matlab, Pixel, Polar Form, Scalar Field, Digital Image, Vector}
+\maketitle
+
+%\pagebreak
+
+\tableofcontents
+\thispagestyle{empty}
+
+\section{Instructions}
+In your Assessment Problems Set (aps) solutions report, do the following:
+\begin{compactenum}[{Do}1$^o$]
+\item Always start your aps1 solutions report with your
+\begin{compactenum}[$\bullet$.1]
+\item Your full name.
+\item Your Student Number.
+\item Your email address.
+\item Current date and time.
+\end{compactenum}
+\item Using either MS Word (and MathType for formulas) or \LaTeX, type each of your answers.
+\colorbox{magenta!15}{Handwritten answers will not be accepted.}
+\item Use either a drawing tool or Matlab to produce plots for a problem solution.
+\item Insert an Appendix [Matlab Scripts] in your aps1 report that gives a listing of each Matlab script used in your report.  
+\item \colorbox{brown!15}{\bf State the problem} in the aps, before you give your solution.
+\item Upload your aps solutions report to the UMLearn dropbox at \url{https://universityofmanitoba.desire2learn.com/d2l/home/617957}.  Your report should include your (1) problem solutions and (2) all Matlab scripts you used to obtain your solutions.
+\item \colorbox{green!15}{Matlab script naming convention}.  In naming each Matlab script, insert the name of the problem, e.g., for the solution of Problem 3, use \colorbox{brown!15}{lab1-3} as the name of your script.
+\item At the end of your lab1 report, insert
+\begin{compactenum}[(i)]
+\item short biography about yourself.
+\item Picture of yourself.
+\end{compactenum}
+\end{compactenum}
+
+\section{Problems}
+
+\begin{compactenum}[\colorbox{magenta!15}{\bf lab1-}1]
+ \item Modify the exmple1LinewidthProb1.m Matlab script from Lecture 1 to obtain the required plot.
+
+% ---------------------------------------------------
+    
+%%\item\label{ProbB22} 
+\item Modify the exmpleExTanhProb2.m Matlab script from Lecture 1 to obtain the required plot.
+\item Modify exmpleEulerProb3.m Matlab script from Lecture 1 to obtain the required plot.
+\item Modify the testImgScalarField.m Matlab script from Lecture 1 to obtain the 3 required suplots.
+\item Prove:\\
+	\begin{theorem} Every digital image is a scalar field.
+	\end{theorem}.
+\item Prove:\\
+	\begin{theorem} Every pixel in a digital image is a vector.
+	\end{theorem}
+\item In an Observations section of your report,
+indicate anything special or interesting that you found in solving one or more of the lab problems.
+\end{compactenum}
+
+\begin{appendix}
+\section{Sample Matlab script}
+\lstinputlisting[]{./scripts/image3Types.m}
+
+\end{appendix}
+
+%\bibliographystyle{amsplain}
+%\bibliography{NSrefs}
+
+\end{document}
