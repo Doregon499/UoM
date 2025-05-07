@@ -1,2 +1,2 @@
 # UoM
-Meng clase repository
+Meng class repository
